@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 5</title>
+</head>
+<body>
+    <form>
+        <label for="num1">Primeiro número:</label>
+        <input type="number" id="num1" name="num1"><br>
+  
+        <label for="num2">Segundo número:</label>
+        <input type="number" id="num2" name="num2"><br>
+  
+        <label for="num3">Terceiro número:</label>
+        <input type="number" id="num3" name="num3"><br>
+  
+        <button id="btn"  type="button">Encontrar a média aritmética</button>
+  
+        <script>
+          const btn = document.getElementById("btn");
+          btn.addEventListener("click", function() {
+            let number1 = parseFloat(document.getElementById("num1").value);
+            let number2= parseFloat(document.getElementById("num2").value);
+            let number3 = parseFloat(document.getElementById("num3").value);
+            let mediaArit = (number1+number2+number3)/3;
+  
+            alert(`O média aritmética é ${mediaArit}`);
+          });
+        </script>
+      </form>
+    
+</body>
+</html>

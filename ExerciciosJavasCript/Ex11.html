@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 11</title>
+</head>
+<body>
+    <form>
+
+        <label for="numA">Valor de A:</label>
+        <input type="number" id="numA" name="numA"><br>
+  
+        <label for="numB">Valor de B:</label>
+        <input type="number" id="numB" name="numB"><br>
+  
+        <label for="numC">Valor de C:</label>
+        <input type="number" id="numC" name="numC"><br>
+  
+        <button id="btn"  type="button">Calculo do Delta</button>
+
+        <br>
+        <div id = "resultado"></div>
+  
+        <script>
+            let resultadoDiv = document.getElementById("resultado");
+          const btn = document.getElementById("btn");
+          btn.addEventListener("click", function() {
+            let number1 = parseFloat(document.getElementById("numA").value);
+            let number2= parseFloat(document.getElementById("numB").value);
+            let number3 = parseFloat(document.getElementById("numC").value);  
+            resultadoDiv.innerHTML = `Δ = ${number2}² - 4 * ${number1} * ${number3}`;
+            setTimeout(() => {
+                resultadoDiv.innerHTML = `Δ = ${number2*number2} - ${4 * number1 *number3}`;
+                setTimeout(() => {  
+                    resultadoDiv.innerHTML = `Δ = ${(number2 * number2) - (4 * number1 * number3) }`;
+                }, 1000);
+            }, 1000);    
+          });
+
+        </script>
+      </form>
+    
+    
+</body>
+</html>
+

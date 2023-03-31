@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 19</title>
+</head>
+<body>
+    <label for="texto">Insira o texto: </label>
+    <input id="texto" type="text"><br>    
+    <button onclick="ordenar()">Ordenar</button>
+    <div id="resultado"></div>
+
+    <script>
+        function ordenar() {
+          var text = document.getElementById("texto").value.split('');
+          var resultadoHTML = document.getElementById("resultado");
+          var aux;
+          for (var i = 0; i < text.length - 1; i++) {
+            for (var j = i + 1; j < text.length; j++) {
+              if (text[i] > text[j]) {
+                aux = text[i];
+                text[i] = text[j];
+                text[j] = aux;
+              }
+            }
+          }
+         resultadoHTML.innerHTML += 'Ordenado:' + text.join(' ');
+        }
+      </script>
+  
+    
+</body>
+</html>

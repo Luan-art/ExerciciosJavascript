@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exercicio 3</title>
+  </head>
+  <body>
+    <form>
+      <label for="num1">Primeiro número:</label>
+      <input type="number" id="num1" name="num1"><br>
+
+      <label for="num2">Segundo número:</label>
+      <input type="number" id="num2" name="num2"><br>
+
+      <label for="num3">Terceiro número:</label>
+      <input type="number" id="num3" name="num3"><br>
+
+      <button id="btn"  type="button">Encontrar o maior número</button>
+
+      <script>
+        const btn = document.getElementById("btn");
+        btn.addEventListener("click", function() {
+          let numbers = [];
+          numbers.push(parseFloat(document.getElementById("num1").value));
+          numbers.push(parseFloat(document.getElementById("num2").value));
+          numbers.push(parseFloat(document.getElementById("num3").value));
+
+          let maiorNumb = numbers[0];
+
+          for (let i = 0; i < numbers.length; i++) {
+            if (numbers[i] > maiorNumb) {
+              maiorNumb = numbers[i];
+            }
+          }
+
+          alert(`O maior número é ${maiorNumb}`);
+        });
+      </script>
+    </form>
+  </body>
+</html>

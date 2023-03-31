@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 15</title>
+</head>
+<body>
+
+    <div id = "base"></div>
+    <div id = "expoente"></div>
+    <div id="resultado"></div>
+    
+    <script>
+        const base = 2;
+        const expoente = 8;
+        let resultado = 1;
+        let passoAPasso = '';
+
+        for (let i = 0; i <= expoente; i++) {
+            if (i > 0) {
+                resultado *= base;
+            }
+            passoAPasso += `${base}<sup>${i}</sup> = ${resultado}<br>`;
+        }
+
+        document.getElementById("base").innerHTML = `Base: ${base}`;
+        document.getElementById("expoente").innerHTML = `Expoente: ${expoente}`;
+        document.getElementById("resultado").innerHTML = `Passo a passo:<br>${passoAPasso}Resultado: ${resultado}`;
+
+    </script>
+</body>
+</html>
